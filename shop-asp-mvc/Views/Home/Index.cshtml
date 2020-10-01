@@ -1,8 +1,28 @@
-﻿
+﻿@using shop_asp_mvc.Models
+@model IEnumerable<SanPham>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Layout/HomeLayout.cshtml";
 }
-
-<h2>Index</h2>
+@{
+    IEnumerable<SanPham> lstDTM = ViewBag.lstDTM as IEnumerable<SanPham>;
+    IEnumerable<SanPham> lstLTM = ViewBag.lstLTM as IEnumerable<SanPham>;
+    IEnumerable<SanPham> lstMTBM = ViewBag.lstMTBM as IEnumerable<SanPham>;
+}
+<div class="container">
+    <div class="content-top">
+        <h1>Điện thoại mới nhất</h1>
+        <div class="grid-in">
+            @Html.Partial("~/Views/SanPham/SanPhamStyle1Partial.cshtml", lstDTM)
+        </div>
+        <h1>Laptop mới nhất</h1>
+        <div class="grid-in">
+            @Html.Partial("~/Views/SanPham/SanPhamStyle1Partial.cshtml", lstLTM)
+        </div>
+        <h1>Máy tính bảng mới nhất</h1>
+        <div class="grid-in">
+            @Html.Partial("~/Views/SanPham/SanPhamStyle1Partial.cshtml", lstMTBM)
+        </div>
+    </div>
+</div>
 

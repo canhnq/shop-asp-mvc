@@ -24,5 +24,12 @@ namespace shop_asp_mvc.Controllers
 
             return View();
         }
+
+        public ActionResult MenuPartial()
+        {
+            var lstSP = db.SanPhams;
+
+            return PartialView(lstSP);
+        }
     }
 }

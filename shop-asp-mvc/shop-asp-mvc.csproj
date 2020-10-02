@@ -563,6 +563,7 @@
     <Content Include="Views\SanPham\XemChiTiet.cshtml" />
     <Content Include="Views\SanPham\SanPham.cshtml" />
     <Content Include="Views\Home\DangKy.cshtml" />
+    <Content Include="Views\Layout\HeaderTopPartial.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

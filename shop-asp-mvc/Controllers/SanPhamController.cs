@@ -35,6 +35,11 @@ namespace shop_asp_mvc.Controllers
 
         public ActionResult SanPham(int? MaLoaiSP,int? MaNSX)
         {
+            //if(Session["TaiKhoan"] == null || Session["TaiKhoan"].ToString() == "")
+            //{
+            //    return RedirectToAction("Index");
+            //}
+
             if (MaLoaiSP == null || MaNSX == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

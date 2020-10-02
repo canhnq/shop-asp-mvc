@@ -46,9 +46,17 @@ namespace shop_asp_mvc.Controllers
         {
             ViewBag.CauHoi = new SelectList(LoadCauHoi());
             if (this.IsCaptchaValid("Captcha is not valid")){
-                ViewBag.ThongBao = "Đăng ký thành công!!!";
-                db.ThanhViens.Add(tv);
-                db.SaveChanges();
+                if (ModelState.IsValid)
+                {
+                    ViewBag.ThongBao = "Đăng ký thành công!!!";
+                    db.ThanhViens.Add(tv);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    ViewBag.ThongBao = "Đăng ký thất bại!!!";
+                }
+                
                 return View();
             }
 
@@ -79,7 +87,7 @@ namespace shop_asp_mvc.Controllers
             if (tv != null)
             {
                 Session["TaiKhoan"] = tv;
-                return RedirectToAction("Index");
+                return Content("<script>window.location.reload();</script>");
             }
             return Content("Tài khoản hoặc mật khẩu không đúng!");
             //string taikhoan = f["txtTaiKhoan"].ToString();

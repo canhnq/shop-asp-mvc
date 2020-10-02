@@ -18,7 +18,7 @@ namespace shop_asp_mvc.Controllers
             return PartialView();
         }
 
-        public ActionResult XemChiTiet(int? id)
+        public ActionResult XemChiTiet(int? id,string tensp)
         {
             if(id == null)
             {

@@ -1,1 +1,1 @@
-Link den trang danh sach san pham
+Tao trang dang ky

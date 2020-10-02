@@ -81,3 +81,6 @@ E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.csproj.CoreCompileInpu
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.csproj.CopyComplete
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.dll
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.pdb
+E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\CaptchaMvc.dll
+E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\CaptchaMvc.pdb
+E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\CaptchaMvc.xml

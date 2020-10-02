@@ -41,6 +41,8 @@
     <Property Name="DaThanhToan" Type="bit" />
     <Property Name="MaKH" Type="int" />
     <Property Name="UuDai" Type="int" />
+    <Property Name="DaHuy" Type="bit" />
+    <Property Name="DaXoa" Type="bit" />
   </EntityType>
   <EntityType Name="KhachHang">
     <Key>
@@ -120,6 +122,10 @@
     <Property Name="MaNSX" Type="int" />
     <Property Name="MaLoaiSP" Type="int" />
     <Property Name="DaXoa" Type="bit" />
+    <Property Name="HinhAnh1" Type="nvarchar(max)" />
+    <Property Name="HinhAnh2" Type="nvarchar(max)" />
+    <Property Name="HinhAnh3" Type="nvarchar(max)" />
+    <Property Name="HinhAnh4" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="ThanhVien">
     <Key>

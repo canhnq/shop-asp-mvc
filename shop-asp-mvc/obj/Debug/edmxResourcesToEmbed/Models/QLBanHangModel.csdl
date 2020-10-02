@@ -47,6 +47,8 @@
     <Property Name="DaThanhToan" Type="Boolean" />
     <Property Name="MaKH" Type="Int32" />
     <Property Name="UuDai" Type="Int32" />
+    <Property Name="DaHuy" Type="Boolean" />
+    <Property Name="DaXoa" Type="Boolean" />
     <NavigationProperty Name="ChiTietDonDatHangs" Relationship="Self.FK_ChiTietDonDatHang_ToTable" FromRole="DonDatHang" ToRole="ChiTietDonDatHang" />
     <NavigationProperty Name="KhachHang" Relationship="Self.FK_DonDatHang_ToTable" FromRole="DonDatHang" ToRole="KhachHang" />
   </EntityType>
@@ -137,6 +139,10 @@
     <Property Name="MaNSX" Type="Int32" />
     <Property Name="MaLoaiSP" Type="Int32" />
     <Property Name="DaXoa" Type="Boolean" />
+    <Property Name="HinhAnh1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HinhAnh4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="BinhLuans" Relationship="Self.FK_BinhLuan_ToTable_1" FromRole="SanPham" ToRole="BinhLuan" />
     <NavigationProperty Name="ChiTietDonDatHangs" Relationship="Self.FK_ChiTietDonDatHang_ToTable_1" FromRole="SanPham" ToRole="ChiTietDonDatHang" />
     <NavigationProperty Name="ChiTietPhieuNhaps" Relationship="Self.FK_ChiTietPhieuNhap_ToTable_1" FromRole="SanPham" ToRole="ChiTietPhieuNhap" />

@@ -1,1 +1,1 @@
-Tao menu danh sach san pham
+Tao trang xem chi tiet san pham

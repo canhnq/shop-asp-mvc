@@ -44,6 +44,8 @@
           <ScalarProperty Name="DaThanhToan" ColumnName="DaThanhToan" />
           <ScalarProperty Name="MaKH" ColumnName="MaKH" />
           <ScalarProperty Name="UuDai" ColumnName="UuDai" />
+          <ScalarProperty Name="DaHuy" ColumnName="DaHuy" />
+          <ScalarProperty Name="DaXoa" ColumnName="DaXoa" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -130,6 +132,10 @@
           <ScalarProperty Name="MaNSX" ColumnName="MaNSX" />
           <ScalarProperty Name="MaLoaiSP" ColumnName="MaLoaiSP" />
           <ScalarProperty Name="DaXoa" ColumnName="DaXoa" />
+          <ScalarProperty Name="HinhAnh1" ColumnName="HinhAnh1" />
+          <ScalarProperty Name="HinhAnh2" ColumnName="HinhAnh2" />
+          <ScalarProperty Name="HinhAnh3" ColumnName="HinhAnh3" />
+          <ScalarProperty Name="HinhAnh4" ColumnName="HinhAnh4" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

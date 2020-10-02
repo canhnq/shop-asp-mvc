@@ -558,6 +558,7 @@
     <Content Include="Views\Home\MenuPartial.cshtml" />
     <Content Include="Views\Layout\ProductLayout.cshtml" />
     <Content Include="Views\SanPham\XemChiTiet.cshtml" />
+    <Content Include="Views\SanPham\SanPham.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

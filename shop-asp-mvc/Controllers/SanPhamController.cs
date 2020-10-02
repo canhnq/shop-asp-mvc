@@ -32,5 +32,19 @@ namespace shop_asp_mvc.Controllers
             
             return View(sp);
         } 
+
+        public ActionResult SanPham(int? MaLoaiSP,int? MaNSX)
+        {
+            if (MaLoaiSP == null || MaNSX == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var lstSP = db.SanPhams.Where(n => n.MaLoaiSP == MaLoaiSP && n.MaNSX == MaNSX && n.DaXoa == false);
+            if (lstSP.Count() == 0)
+            {
+                return HttpNotFound();
+            }
+            return View(lstSP);
+        }
     }
 }

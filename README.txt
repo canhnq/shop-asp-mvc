@@ -1,1 +1,1 @@
-Tao trang xem chi tiet san pham
+Link den trang danh sach san pham

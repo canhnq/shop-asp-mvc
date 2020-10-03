@@ -1,1 +1,1 @@
-Kiem tra dinh dang nhap vao
+Tao class metadata

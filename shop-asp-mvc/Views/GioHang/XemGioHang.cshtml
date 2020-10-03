@@ -1,10 +1,37 @@
 ﻿@using shop_asp_mvc.Models;
+@model List<ItemGioHang>
 
-@model IEnumerable<GioHang>
 @{
     ViewBag.Title = "XemGioHang";
     Layout = "~/Views/Layout/ProductLayout.cshtml";
 }
 
-<h2>XemGioHang</h2>
+@if (Model == null)
+{
+    <h1>Giỏ hàng rỗng!!!</h1>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <td>Mã sản phẩm</td>
+            <td>Tên sản phẩm</td>
+            <td>Hình ảnh</td>
+            <td>Số lượng</td>
+            <td>Đơn giá</td>
+            <td>Thành tiền</td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaSP</td>
+                <td>@item.TenSP</td>
+                <td><img src="@Url.Content("~/Content/HinhAnhSP/"+item.HinhAnh)" width="150" height="150"</td>
+                <td>@item.SoLuong</td>
+                <td>@item.DonGia.ToString()</td>
+                <td>@item.ThanhTien</td>
+            </tr>
+        }
+    </table>
+}
 

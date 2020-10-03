@@ -149,7 +149,7 @@
     <Compile Include="Models\DonDatHang.cs">
       <DependentUpon>QLBanHangModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\GioHang.cs" />
+    <Compile Include="Models\ItemGioHang.cs" />
     <Compile Include="Models\KhachHang.cs">
       <DependentUpon>QLBanHangModel.tt</DependentUpon>
     </Compile>
@@ -569,6 +569,7 @@
     <Content Include="Views\Layout\HeaderTopPartial.cshtml" />
     <Content Include="Views\GioHang\XemGioHang.cshtml" />
     <Content Include="Views\GioHang\GioHangPartial.cshtml" />
+    <Content Include="Views\GioHang\ThongBao.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -51,6 +51,7 @@ E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\roslyn\vbc.rsp
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\roslyn\VBCSCompiler.exe
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\roslyn\VBCSCompiler.exe.config
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\Antlr3.Runtime.dll
+E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\CaptchaMvc.dll
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\EntityFramework.dll
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\EntityFramework.SqlServer.dll
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
@@ -64,6 +65,8 @@ E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\System.Web.WebPages.Deployment.dll
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\System.Web.WebPages.dll
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\System.Web.WebPages.Razor.dll
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\WebGrease.dll
+E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\CaptchaMvc.pdb
+E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\CaptchaMvc.xml
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\EntityFramework.xml
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\EntityFramework.SqlServer.xml
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\System.Web.Helpers.xml
@@ -81,6 +84,3 @@ E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.csproj.CoreCompileInpu
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.csproj.CopyComplete
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.dll
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.pdb
-E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\CaptchaMvc.dll
-E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\CaptchaMvc.pdb
-E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\CaptchaMvc.xml

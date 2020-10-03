@@ -2,7 +2,7 @@
     <a href="@Url.Action("XemGioHang","GioHang")">
         <h3>
             <div class="total">
-                0 VND <br /> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> Sản phẩm)
+                @ViewBag.TongTien VND <br /> (<span></span> @ViewBag.TongSoLuong Sản phẩm)
             </div>
             <img src="~/Content/images/cart.png" alt="" />
         </h3>

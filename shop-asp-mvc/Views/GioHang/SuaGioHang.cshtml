@@ -1,0 +1,56 @@
+﻿@using shop_asp_mvc.Models;
+@model ItemGioHang
+
+@{
+    ViewBag.Title = "SuaGioHang";
+    Layout = "~/Views/Layout/ProductLayout.cshtml";
+}
+
+@{
+    List<ItemGioHang> lstGioHang = ViewBag.GioHang as List<ItemGioHang>;
+}
+<table class="table">
+    <tr>
+        <td>Mã sản phẩm</td>
+        <td>Tên sản phẩm</td>
+        <td>Hình ảnh</td>
+        <td>Số lượng</td>
+        <td>Đơn giá</td>
+        <td>Thành tiền</td>
+    </tr>
+    @foreach (var item in lstGioHang)
+    {
+        if (Model.MaSP == item.MaSP)
+        {
+            using (Html.BeginForm("CapNhatGioHang", "GioHang"))
+            {
+
+                <tr>
+                    <td>@item.MaSP @Html.Hidden("MaSP",item.MaSP)</td>
+                    <td>@item.TenSP</td>
+                    <td><img src="@Url.Content("~/Content/HinhAnhSP/"+item.HinhAnh)" width="50" height="50"</td>
+                    <td>@Html.TextBox("SoLuong", item.SoLuong)</td>
+                    <td>@item.DonGia.ToString("#,##") VND</td>
+                    <td>@item.ThanhTien.ToString("#,##") VND</td>
+                    <td><input type="submit" value="Cập nhật" /></td>
+
+                </tr>
+            }
+
+
+        }
+        else
+        {
+            <tr>
+                <td>@item.MaSP</td>
+                <td>@item.TenSP</td>
+                <td><img src="@Url.Content("~/Content/HinhAnhSP/"+item.HinhAnh)" width="50" height="50"</td>
+                <td>@item.SoLuong</td>
+                <td>@item.DonGia.ToString("#,##") VND</td>
+                <td>@item.ThanhTien.ToString("#,##") VND</td>
+                <td>@Html.ActionLink("Sửa", "SuaGioHang", new { @MaSP = item.MaSP })</td>
+            </tr>
+        }
+
+    }
+</table>

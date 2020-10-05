@@ -89,5 +89,44 @@ namespace shop_asp_mvc.Controllers
             ViewBag.TongTien = TinhTongTien();
             return PartialView();
         }
+        public ActionResult SuaGioHang(int MaSP)
+        {
+            if(Session["GioHang"] == null)
+            {
+                return RedirectToAction("index", "Home");
+            }
+
+            SanPham sp = db.SanPhams.SingleOrDefault(n => n.MaSP == MaSP);
+            if (sp == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+
+            List<ItemGioHang> lstGioHang = LayGioHang();
+            ItemGioHang spCheck = lstGioHang.SingleOrDefault(n => n.MaSP == MaSP);
+
+            if(spCheck == null)
+            {
+                return RedirectToAction("Index","Home");
+            }
+            ViewBag.GioHang = lstGioHang;
+            return View(spCheck);
+        }
+        
+        [HttpPost]
+        public ActionResult CapNhatGioHang(ItemGioHang itemGH)
+        {
+            SanPham spCheck = db.SanPhams.Single(n => n.MaSP == itemGH.MaSP);
+            if(spCheck.SoLuongTon < itemGH.SoLuong)
+            {
+                return View("ThongBao");
+            }
+            List<ItemGioHang> lstGH = LayGioHang();
+            ItemGioHang itemGHUpdate = lstGH.Find(n => n.MaSP == itemGH.MaSP);
+            itemGHUpdate.SoLuong = itemGH.SoLuong;
+            itemGHUpdate.ThanhTien = itemGHUpdate.SoLuong * itemGHUpdate.DonGia;
+            return RedirectToAction("XemGioHang");
+        }
     }
 }

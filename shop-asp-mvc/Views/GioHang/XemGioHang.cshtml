@@ -26,10 +26,11 @@ else
             <tr>
                 <td>@item.MaSP</td>
                 <td>@item.TenSP</td>
-                <td><img src="@Url.Content("~/Content/HinhAnhSP/"+item.HinhAnh)" width="150" height="150"</td>
+                <td><img src="@Url.Content("~/Content/HinhAnhSP/"+item.HinhAnh)" width="50" height="50"</td>
                 <td>@item.SoLuong</td>
-                <td>@item.DonGia.ToString()</td>
-                <td>@item.ThanhTien</td>
+                <td>@item.DonGia.ToString("#,##") VND</td>
+                <td>@item.ThanhTien.ToString("#,##") VND</td>
+                <td>@Html.ActionLink("Sửa", "SuaGioHang", new { @MaSP = item.MaSP })</td>
             </tr>
         }
     </table>

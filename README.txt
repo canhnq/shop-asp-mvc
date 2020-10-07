@@ -1,2 +1,1 @@
-Tao form cho khach vang lai
-rang buoc sua san pham 
+Tao ajax cho phan dat hang

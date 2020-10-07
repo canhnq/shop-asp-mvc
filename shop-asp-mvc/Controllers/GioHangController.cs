@@ -51,6 +51,38 @@ namespace shop_asp_mvc.Controllers
             return Redirect(strURL);
         }
 
+        public ActionResult ThemGioHangAjax(int MaSP, string strURL)
+        {
+            SanPham sp = db.SanPhams.SingleOrDefault(n => n.MaSP == MaSP);
+            if (sp == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            List<ItemGioHang> lstGioHang = LayGioHang();
+
+            ItemGioHang spCheck = lstGioHang.SingleOrDefault(n => n.MaSP == MaSP);
+            if (spCheck != null)
+            {
+                if (sp.SoLuongTon < spCheck.SoLuong)
+                {
+                    return Content("<script> alert(\"Sản phẩm đã hết hàng\")</script>");
+                }
+                spCheck.SoLuong++;
+                spCheck.ThanhTien = spCheck.SoLuong * spCheck.DonGia;
+                ViewBag.TongSoLuong = TinhTongSoLuong();
+                ViewBag.TongTien = TinhTongTien();
+                return PartialView("GioHangPartial");
+            }
+            ItemGioHang itemGH = new ItemGioHang(MaSP);
+            if (sp.SoLuongTon < itemGH.SoLuong)
+            {
+                return Content("<script> alert(\"Sản phẩm đã hết hàng\")</script>");
+            }
+            lstGioHang.Add(itemGH);
+            return Redirect(strURL);
+        }
+
         public int TinhTongSoLuong()
         {
             List<ItemGioHang> lstGioHang = Session["GioHang"] as List<ItemGioHang>;

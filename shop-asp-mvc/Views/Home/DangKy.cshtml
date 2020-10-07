@@ -7,7 +7,6 @@
     Layout = "~/Views/Layout/ProductLayout.cshtml";
 }
 
-<h2>DangKy</h2>
 <div class="DangKy">
     <div class="register">
         @using (Html.BeginForm())
@@ -24,16 +23,19 @@
                     @Html.ValidationMessageFor(model => model.TaiKhoan)
                 </div>
                 <div>
-                    <span>Họ tên</span>
-                    @Html.TextBox("HoTen")
+                    @Html.LabelFor(model=>model.HoTen)
+                    @Html.TextBoxFor(model => model.HoTen)
+                    @Html.ValidationMessageFor(model=>model.HoTen)
                 </div>
                 <div>
-                    <span>Địa chỉ</span>
-                    @Html.TextBox("DiaChi")
+                    @Html.LabelFor(model=>model.DiaChi)
+                    @Html.TextBoxFor(model=>model.DiaChi)
+                    @Html.ValidationMessageFor(model=>model.DiaChi)
                 </div>
                 <div>
-                    <span>Email</span>
-                    @Html.TextBox("Email")
+                    @Html.LabelFor(model=>model.Email)
+                    @Html.TextBoxFor(model=>model.Email)
+                    @Html.ValidationMessageFor(model=>model.Email)
                 </div>
             </div>
             <div class="col-md-4 register-bottom-grid">

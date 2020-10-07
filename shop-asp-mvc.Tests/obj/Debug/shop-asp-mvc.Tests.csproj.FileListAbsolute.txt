@@ -1,0 +1,2 @@
+E:\Do-an\shop-asp-mvc\shop-asp-mvc.Tests\obj\Debug\shop-asp-mvc.Tests.csprojAssemblyReference.cache
+E:\Do-an\shop-asp-mvc\shop-asp-mvc.Tests\obj\Debug\shop-asp-mvc.Tests.csproj.CoreCompileInputs.cache

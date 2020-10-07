@@ -79,8 +79,8 @@ E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\System.Web.WebPages.Razor.xml
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\Newtonsoft.Json.xml
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\Antlr3.Runtime.pdb
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.csprojAssemblyReference.cache
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.csproj.CoreCompileInputs.cache
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.csproj.CopyComplete
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.dll
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.pdb
+E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.csprojAssemblyReference.cache

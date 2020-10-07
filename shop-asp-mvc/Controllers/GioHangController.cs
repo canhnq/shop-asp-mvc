@@ -128,5 +128,81 @@ namespace shop_asp_mvc.Controllers
             itemGHUpdate.ThanhTien = itemGHUpdate.SoLuong * itemGHUpdate.DonGia;
             return RedirectToAction("XemGioHang");
         }
+        public ActionResult XoaGioHang(int MaSP)
+        {
+            if (Session["GioHang"] == null)
+            {
+                return RedirectToAction("index", "Home");
+            }
+
+            SanPham sp = db.SanPhams.SingleOrDefault(n => n.MaSP == MaSP);
+            if (sp == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+
+            List<ItemGioHang> lstGioHang = LayGioHang();
+            ItemGioHang spCheck = lstGioHang.SingleOrDefault(n => n.MaSP == MaSP);
+
+            if (spCheck == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            lstGioHang.Remove(spCheck);
+
+            return RedirectToAction("XemGioHang");
+        }
+
+        public ActionResult DatHang(KhachHang kh)
+        {
+            if (Session["GioHang"] == null)
+            {
+                return RedirectToAction("index", "Home");
+            }
+            KhachHang khachHang = new KhachHang();
+            if (Session["TaiKhoan"] == null)
+            {
+                khachHang = kh;
+                db.KhachHangs.Add(khachHang);
+                db.SaveChanges();
+            }
+            else
+            {
+                ThanhVien tv = Session["TaiKhoan"] as ThanhVien;
+                khachHang.TenKH = tv.HoTen;
+                khachHang.DiaChi = tv.DiaChi;
+                khachHang.Email = tv.Email;
+                khachHang.SoDienThoai = tv.SoDienThoai;
+                khachHang.MaThanhVien = tv.MaLoaiTV;
+                db.KhachHangs.Add(khachHang);
+                db.SaveChanges();
+            }
+
+            DonDatHang ddh = new DonDatHang();
+            ddh.MaKH = int.Parse(khachHang.MaKH.ToString());
+            ddh.NgayDat = DateTime.Now;
+            ddh.TinhTrangGiaoHang = false;
+            ddh.DaThanhToan = false;
+            ddh.UuDai = 0;
+            ddh.DaHuy = false;
+            ddh.DaXoa = false;
+            db.DonDatHangs.Add(ddh);
+            db.SaveChanges();
+            List<ItemGioHang> lstGH = LayGioHang();
+            foreach(var item in lstGH)
+            {
+                ChiTietDonDatHang ctdh = new ChiTietDonDatHang();
+                ctdh.MaDDH = ddh.MaDDH;
+                ctdh.MaSP = item.MaSP;
+                ctdh.TenSP = item.TenSP;
+                ctdh.SoLuong = item.SoLuong;
+                ctdh.DonGia = item.DonGia;
+                db.ChiTietDonDatHangs.Add(ctdh);
+            }
+            db.SaveChanges();
+            Session["GioHang"] = null;
+            return RedirectToAction("XemGioHang");
+        }
     }
 }

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using shop_asp_mvc.Models;
 using CaptchaMvc.HtmlHelpers;
 using CaptchaMvc;
+using System.Activities;
 
 namespace shop_asp_mvc.Controllers
 {
@@ -87,7 +88,9 @@ namespace shop_asp_mvc.Controllers
             if (tv != null)
             {
                 Session["TaiKhoan"] = tv;
-                return Content("<script>window.location.reload();</script>");
+                //return Content("<script>window.location.reload()</script>");
+                return RedirectToAction("Index");
+                
             }
             return Content("Tài khoản hoặc mật khẩu không đúng!");
             //string taikhoan = f["txtTaiKhoan"].ToString();

@@ -32,5 +32,11 @@ namespace shop_asp_mvc.Controllers
             
             return RedirectToAction("KQTimKiem",new { @sTuKhoa = sTuKhoa });
         }
+        public ActionResult KQTimKiemPartial(string sTuKhoa)
+        {
+            var lstSP = db.SanPhams.Where(n => n.TenSP.Contains(sTuKhoa));
+            ViewBag.TuKhoa = sTuKhoa;
+            return PartialView(lstSP.OrderBy(n=>n.DonGia));
+        }
     }
 }

@@ -1,1 +1,1 @@
-Chuc nang tim kiem
+Chuc nang tim kiem bang ajax

@@ -84,3 +84,7 @@ E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.csproj.CopyComplete
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.dll
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.pdb
 E:\Do-an\shop-asp-mvc\shop-asp-mvc\obj\Debug\shop-asp-mvc.csprojAssemblyReference.cache
+E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\PagedList.dll
+E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\PagedList.Mvc.dll
+E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\PagedList.xml
+E:\Do-an\shop-asp-mvc\shop-asp-mvc\bin\PagedList.Mvc.xml

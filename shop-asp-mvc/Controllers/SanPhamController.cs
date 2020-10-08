@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 
 namespace shop_asp_mvc.Controllers
 {
@@ -33,7 +34,7 @@ namespace shop_asp_mvc.Controllers
             return View(sp);
         } 
 
-        public ActionResult SanPham(int? MaLoaiSP,int? MaNSX)
+        public ActionResult SanPham(int? MaLoaiSP,int? MaNSX,int? page)
         {
             //if(Session["TaiKhoan"] == null || Session["TaiKhoan"].ToString() == "")
             //{
@@ -49,7 +50,13 @@ namespace shop_asp_mvc.Controllers
             {
                 return HttpNotFound();
             }
-            return View(lstSP);
+            int pageSize = 6;
+            int pageNumber = (page ?? 1);
+
+            ViewBag.MaLoaiSP = MaLoaiSP;
+            ViewBag.MaNSX = MaNSX;
+
+            return View(lstSP.OrderBy(n=>n.MaSP).ToPagedList(pageNumber,pageSize));
         }
     }
 }

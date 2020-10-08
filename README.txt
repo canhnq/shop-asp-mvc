@@ -1,1 +1,1 @@
-Tao ajax cho phan dat hang
+Chuc nang tim kiem

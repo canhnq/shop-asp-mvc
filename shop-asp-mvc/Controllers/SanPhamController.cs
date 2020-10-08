@@ -50,6 +50,10 @@ namespace shop_asp_mvc.Controllers
             {
                 return HttpNotFound();
             }
+            if(Request.HttpMethod != "GET")
+            {
+                page = 1;
+            }
             int pageSize = 6;
             int pageNumber = (page ?? 1);
 
